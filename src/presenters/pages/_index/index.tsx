@@ -1,7 +1,7 @@
 export function IndexPage() {
   return (
     <div>
-      <h1>Criador de Fichas RPG</h1>
+      <h1>IndexPage</h1>
     </div>
   )
 }

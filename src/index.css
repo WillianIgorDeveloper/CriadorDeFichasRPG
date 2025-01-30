@@ -1,54 +1,56 @@
-@import "tailwindcss";
-
-@theme {
-  /* Fonts */
-  --font-sans: "WorkSans", "ui-sans-serif", "system-ui", "sans-serif";
-  --font-serif: "WorkSansItalic", "ui-serif",  "serif";
-  --font-charmRegular: "CharmRegular";
-  --font-charmBold: "CharmBold";
-  /* Colors */
-  --color-background: #272935;
-  --color-foreground: #F8F8FC;
-  --color-primary: #7359F8;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.5rem;
+  }
 }
-
 @layer base {
   * {
-    @apply antialiased scroll-smooth;
+    @apply border-border antialiased scroll-smooth;
   }
   body {
     @apply bg-background text-foreground w-full min-w-80;
   }
 }
-
 @font-face {
-  font-family: WorkSans;
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
+  font-family: "WorkSans";
   src: url("/fonts/WorkSans.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: WorkSansItalic;
-  font-style: italic;
   font-weight: 100 900;
   font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "WorkSans";
   src: url("/fonts/WorkSans-Italic.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: CharmRegular;
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 100 900;
   font-display: swap;
-  src: url("/fonts/Charm-Regular.ttf") format("truetype");
+  font-style: italic;
 }
-
 @font-face {
-  font-family: CharmBold;
-  font-style: normal;
+  font-family: "Charm";
+  src: url("/fonts/Charm.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
-  src: url("/fonts/Charm-Bold.ttf") format("truetype");
+  font-style: normal;
 }
